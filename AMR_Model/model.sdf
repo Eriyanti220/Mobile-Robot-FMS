@@ -97,5 +97,13 @@
           </geometry>
         </visual>
       </link>
+   <include>
+      <uri>model://hokuyo</uri>
+      <pose>0.18 0 0.2 0 0 0</pose>
+    </include>
+    <joint name="hokuyo_joint" type="fixed">
+      <child>hokuyo::link</child>
+      <parent>chassis</parent>
+    </joint>
   </model>
 </sdf>
